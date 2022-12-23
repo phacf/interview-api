@@ -39,7 +39,7 @@ export default class QuizzModel {
 
         payload.questions = payload.questions!.map(
           (question: any, index: number) => {
-            if(typeof question)question = { [index.toString()]: question }
+            if(typeof question === 'string')question = { [index.toString()]: question }
             return question
           }
         )
